@@ -1,13 +1,15 @@
 import React, { useState } from 'react'
 
+
+
 function PokemonForm({ setPokemonId, setLoading, setError }){
   const [ pokemon, setPokemon ] = useState('')
 
-  const handleChange = e => {
+  const Change = e => {
     setPokemon(e.target.value)
   }
 
-  const handleSubmit = e => {
+  const Submit = e => {
     e.preventDefault()
     if(pokemon !== ''){
       setError(false)
@@ -19,17 +21,19 @@ function PokemonForm({ setPokemonId, setLoading, setError }){
     setError(true)
   }
 
+  
+
   return (
-    <form className="pokemon-form" onSubmit={handleSubmit}>
+    <form className="pokemon-form" onSubmit={Submit}>
       <input
         className="pokemon-input"
         type="text"
         name="pokemon"
         value={pokemon}
         placeholder="Busca tu pokemon"
-        onChange={handleChange}
+        onChange={Change}
         autoComplete="off"/>
-      <input type="button" className="pokemon-btn" value="Buscar"/>
+      <input type="button" onClick={Submit} className="pokemon-btn" value="Buscar"/>
     </form>
   )
 }

@@ -11,7 +11,7 @@ function PokedexSc({ pokemon, loading, error }){
       <div className="pokedex-screen">
         <img
           src={ErrorPokemon}
-          alt="Hubo un error buscando tu pokemon"
+          alt="Hubo un error "
           className="pokedex-no-screen"
         />
       </div>

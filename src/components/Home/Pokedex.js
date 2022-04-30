@@ -34,7 +34,7 @@ function Pokedex(){
             error={error}
           />
         </div>
-        <div className="pokedex-left-bottom">
+        <div >
           
           <PokedexForm
             setPokemonId={setPokemonId}
